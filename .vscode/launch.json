@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot - BootApplication",
+            "request": "launch",
+            "mainClass": "com.spring.BootApplication",
+            "projectName": "boot",
+            "vmArgs": [
+                "-Dfile.encoding=UTF-8",
+                "--add-opens",
+                "java.management/com.sun.jmx.remote.util=ALL-UNNAMED",
+                "--add-opens",
+                "java.base/java.lang.reflect=ALL-UNNAMED",
+                "--add-opens",
+                "java.base/java.util=ALL-UNNAMED",
+                "--add-opens",
+                "java.base/java.lang=ALL-UNNAMED"
+            ]
+        }
+    ]
+}

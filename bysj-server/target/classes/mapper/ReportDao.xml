@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.ReportDao">
+
+	<!--风景-->
+	<select id="selectAttractionsReport" resultType="com.alibaba.fastjson.JSONObject">
+		select biaoti name, count(1) value from shoucangjilu where biao='jingdianxinxi' group by biaoti
+	</select>
+
+	<!--路线-->
+	<select id="selectRouteReport" resultType="com.alibaba.fastjson.JSONObject">
+		select biaoti name, count(1) value from shoucangjilu where biao='lvyouxianlu' group by biaoti limit 10
+	</select>
+
+</mapper>
